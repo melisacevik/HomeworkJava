@@ -14,10 +14,10 @@ public class ATM {
             password = input.nextLine();
 
             if( userName.equals("patika") && password.equals("dev123")){
-                System.out.print("Merhaba! Kodluyoruz bankasına hoşgeldiniz! ");
+                System.out.println("Merhaba! Kodluyoruz bankasına hoşgeldiniz! ");
 
                 do{
-                    System.out.print("1) Para Yatırma\n" +
+                    System.out.println("1) Para Yatırma\n" +
                             "2) Para Çekme\n" +
                             "3) Bakiye Sorgulama\n" +
                             "4) Çıkış Yap \n");
@@ -42,10 +42,14 @@ public class ATM {
                         case 3:
                             System.out.println("Bakiyeniz: " + balance);
                             break;
+                        case 4:
+                            System.out.println("Tekrar görüşmek üzere!");
+                            break;
+                        default:
+                            System.out.println("Geçersiz seçim");
+                            break;
                     }
-
                 }while( select != 4);
-                System.out.println("Tekrar görüşmek üzere! ");
                 break;
             }else{
                 right--;
